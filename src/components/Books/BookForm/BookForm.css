@@ -1,0 +1,25 @@
+.main{
+    width: 30%;
+    vertical-align: top;
+    padding: 30px;
+    float:left;
+}
+.main label{
+    width: 150px;
+    display: inline-block;
+    text-align:left;
+}
+.submit-btn{
+    background: darkgreen;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+@media only screen and (max-width: 768px) {
+    .main{
+        width: 100%;
+    }
+    
+  }
