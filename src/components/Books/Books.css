@@ -34,7 +34,7 @@
     margin: 5px 0;
 }
 @media only screen and (max-width: 768px) {
-    .books{
+    .books,.book{
         width: 100%;
     }
     

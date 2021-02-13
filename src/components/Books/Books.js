@@ -13,17 +13,16 @@ const Books = () => {
 const  [books, setBooks] = useState(booksData);
 const  [editBook, seteditBook] = useState('');
 const dispatch = useDispatch();
+const searchBook = (text) => {
+    setBooks(booksData.filter(book => book.name.includes(text)));
+}
+
 
 useEffect(() => {
-    setBooks(booksData);  
-});
+    setBooks(booksData); 
+},[booksData]);
 const deleteBook = (book) => {
     dispatch({type : "DELETE_BOOK", payload : book}); 
-}
-const searchBook = (text) => {
-    console.log(books.filter(book => book.name.includes(text)));
-    setBooks(books.filter(book => book.name.includes(text)));
-    console.log(books);
 }
 
 const bookData = books.length ? books.map( item => {return <div className="book" key={item.id}>
